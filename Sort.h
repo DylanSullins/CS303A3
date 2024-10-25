@@ -77,9 +77,17 @@ void insertion_sort(Queue<T>& q)
     }
 }
 
-
+// Algorithm from Lecture 10 Slide 138
 template <typename T>
 void insertion_sort(std::vector<T> &num)
+/*
+    Insertion Sort Implementation for Vector of type T.
+    Parameters:
+        std::vector<T> num
+    
+    Returns:
+        None
+*/
 {
     int i, j, key;
     bool insertionNeeded = false;
@@ -103,6 +111,16 @@ void insertion_sort(std::vector<T> &num)
 
 template <typename T>
 void insertion_sort_the_easy_way(Queue<T>& q)
+/*
+    Insertion Sort Implementation for User Defined Queue
+    Copies Queue to std::vector, sorts vector, populates
+    Queue.
+    Parameters:
+        Queue<T> q: Queue to sort
+    
+    Returns:
+        None
+*/
 {
     std::vector<T> vec;
     while (!q.empty())
