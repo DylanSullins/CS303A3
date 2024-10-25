@@ -60,7 +60,7 @@ int main()
         std::cout << "\t\t--" << itemsRepeats.at(i) << std::endl;
     }
     std::cout << "\tSearching vector for last occurrence of 3: " << std::endl;
-    pos = last_occurrence_linear_search(itemsRepeats, 3, items.size());
+    pos = last_occurrence_linear_search(itemsRepeats, 3, items.size()); // Search from end to start
     std::cout << "\t\t3 found at index " << pos << std::endl;
     std::cout << std::endl;
     
