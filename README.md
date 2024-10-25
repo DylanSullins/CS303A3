@@ -3,7 +3,7 @@
 Dylan Sullins
 
 ## Overview
-This project is a simple implementation of a templated Queue. There are two versions of insertion sort, one algorithm rewritten for the user-defined Queue using a user-defined peek_and_pop() function, the other copied from lecture 10 for sorting a vector. In the second sort implementation, the Queue is copied into a vector, and the vector is sorted then copied in order back into the queue.
+This project is a simple implementation of a templated Queue. There are two versions of insertion sort, one algorithm rewritten for the user-defined Queue using a user-defined peek_and_pop() function, the other copied from lecture 10 for sorting a vector. In the second sort implementation (aptly named Cheater Sort), the Queue is copied into a vector, and the vector is sorted then copied in order back into the queue.
 
 ## How to Install
 1. In a terminal, navigate to the directory that you want to clone the repository into.

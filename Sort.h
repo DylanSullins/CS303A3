@@ -110,7 +110,7 @@ void insertion_sort(std::vector<T> &num)
 
 
 template <typename T>
-void insertion_sort_the_easy_way(Queue<T>& q)
+void cheater_sort(Queue<T>& q)
 /*
     Insertion Sort Implementation for User Defined Queue
     Copies Queue to std::vector, sorts vector, populates

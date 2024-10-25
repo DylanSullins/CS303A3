@@ -87,6 +87,6 @@ int main()
     std::cout << "\tDisplaying Queue" << std::endl;
     display(sortingQ);
     std::cout << "\tCheater Sort" << std::endl;
-    insertion_sort_the_easy_way(sortingQ);
+    cheater_sort(sortingQ);
     display(sortingQ);
 }
