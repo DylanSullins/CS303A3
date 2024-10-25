@@ -14,7 +14,7 @@ int last_occurrence_linear_search(std::vector<T>& items, T target, int pos)
         int pos or -1 if not found
 */
 {
-    if (pos < 0) return -1;
-    if (items[pos] == target) return pos;
-    else return last_occurrence_linear_search(items, target, pos - 1);
+    if (pos < 0) return -1;                                                // Not found
+    if (items[pos] == target) return pos;                                  // Found
+    else return last_occurrence_linear_search(items, target, pos - 1);     // Recursive call
 }

@@ -33,6 +33,7 @@ void insert_in_queue_sorted(Queue<T>& sorted_q, T data)
 {
     Queue<T> temp_q;
 
+    // Peek and pop until either sorted_q is empty or next value is 
     while (!sorted_q.empty() && sorted_q.front() <= data)
     {
         temp_q.push(peek_and_pop(sorted_q));
@@ -73,5 +74,44 @@ void insertion_sort(Queue<T>& q)
     while (!sorted_q.empty())
     {
         q.push(peek_and_pop(sorted_q));
+    }
+}
+
+
+template <typename T>
+void insertion_sort(std::vector<T> &num)
+{
+    int i, j, key;
+    bool insertionNeeded = false;
+    for (j = 1; j < num.size(); j++)
+    {
+        key = num[j];
+        insertionNeeded = false;
+        for (i = j -1; i >= 0; i--)
+        {
+            if (key < num[i]) 
+            {
+                num[i + 1] = num[i];
+                insertionNeeded = true;
+            }
+            else break;
+        }
+        if (insertionNeeded) num[i + 1] = key;
+    }
+}
+
+
+template <typename T>
+void insertion_sort_the_easy_way(Queue<T>& q)
+{
+    std::vector<T> vec;
+    while (!q.empty())
+    {
+        vec.push_back(peek_and_pop(q));
+    }
+    insertion_sort(vec);
+    for (auto i = vec.begin(); i != vec.end(); ++i)
+    {
+        q.push(*i);
     }
 }

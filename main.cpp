@@ -78,4 +78,15 @@ int main()
     std::cout << "\tSorting Queue:" << std::endl;
     insertion_sort<int>(sortingQ);
     display(sortingQ);
+    
+    for (int i = 0; i < 10; i++)
+    {
+        sortingQ.pop();
+        sortingQ.push(rand() % 10);
+    }
+    std::cout << "\tDisplaying Queue" << std::endl;
+    display(sortingQ);
+    std::cout << "\tCheater Sort" << std::endl;
+    insertion_sort_the_easy_way(sortingQ);
+    display(sortingQ);
 }

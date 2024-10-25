@@ -2,6 +2,7 @@
 
 template <typename T>
 struct Node
+// Node struct for use in Queue implementation
 {
     T data;
     Node<T>* next;
